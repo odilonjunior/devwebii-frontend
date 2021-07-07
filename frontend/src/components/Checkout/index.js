@@ -8,24 +8,12 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
-import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import UserData from '../UserData';
 import VacinaData from '../VacinaData';
 import Review from '../Review';
+import Copyright from '../Common/Copyright';
 
-function Copyright() {
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Your Website
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
 
 const useStyles = makeStyles((theme) => ({
     appBar: {
@@ -64,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const steps = ['Shipping address', 'Payment details', 'Review your order'];
+const steps = ['Dados do usuário', 'Localização', 'Revisão'];
 
 function getStepContent(step) {
     switch (step) {
@@ -97,7 +85,7 @@ export default function Checkout() {
             <AppBar position="absolute" color="default" className={classes.appBar}>
                 <Toolbar>
                     <Typography variant="h6" color="inherit" noWrap>
-                        Company name
+                        Covid System
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -117,11 +105,10 @@ export default function Checkout() {
                         {activeStep === steps.length ? (
                             <React.Fragment>
                                 <Typography variant="h5" gutterBottom>
-                                    Thank you for your order.
+                                    Obrigado pelo agendamento!
                                 </Typography>
                                 <Typography variant="subtitle1">
-                                    Your order number is #2001539. We have emailed your order confirmation, and will
-                                    send you an update when your order has shipped.
+                                    Sua senha é 90092 e será enviada por e-mail.
                                 </Typography>
                             </React.Fragment>
                         ) : (
@@ -130,7 +117,7 @@ export default function Checkout() {
                                 <div className={classes.buttons}>
                                     {activeStep !== 0 && (
                                         <Button onClick={handleBack} className={classes.button}>
-                                            Back
+                                            Voltar
                                         </Button>
                                     )}
                                     <Button
@@ -139,7 +126,7 @@ export default function Checkout() {
                                         onClick={handleNext}
                                         className={classes.button}
                                     >
-                                        {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
+                                        {activeStep === steps.length - 1 ? 'Agendar' : 'Próximo'}
                                     </Button>
                                 </div>
                             </React.Fragment>

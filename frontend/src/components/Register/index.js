@@ -46,7 +46,7 @@ export default function Register() {
                     <LockOutlinedIcon />
                 </Avatar>
                 <Typography component="h1" variant="h5">
-                    Sign up
+                    Cadastro
                 </Typography>
                 <form className={classes.form} noValidate>
                     <Grid container spacing={2}>
@@ -58,7 +58,7 @@ export default function Register() {
                                 required
                                 fullWidth
                                 id="firstName"
-                                label="First Name"
+                                label="Primeiro nome"
                                 autoFocus
                             />
                         </Grid>
@@ -68,7 +68,7 @@ export default function Register() {
                                 required
                                 fullWidth
                                 id="lastName"
-                                label="Last Name"
+                                label="Sobrenome"
                                 name="lastName"
                                 autoComplete="lname"
                             />
@@ -79,7 +79,7 @@ export default function Register() {
                                 required
                                 fullWidth
                                 id="email"
-                                label="Email Address"
+                                label="Endereço e-mail"
                                 name="email"
                                 autoComplete="email"
                             />
@@ -90,7 +90,7 @@ export default function Register() {
                                 required
                                 fullWidth
                                 name="password"
-                                label="Password"
+                                label="Senha"
                                 type="password"
                                 id="password"
                                 autoComplete="current-password"
@@ -99,7 +99,7 @@ export default function Register() {
                         <Grid item xs={12}>
                             <FormControlLabel
                                 control={<Checkbox value="allowExtraEmails" color="primary" />}
-                                label="I want to receive inspiration, marketing promotions and updates via email."
+                                label="Aceito receber informações sobre o Covid por e-mail."
                             />
                         </Grid>
                     </Grid>
@@ -110,12 +110,12 @@ export default function Register() {
                         color="primary"
                         className={classes.submit}
                     >
-                        Sign Up
+                        Registrar-se
                     </Button>
                     <Grid container justifyContent="flex-end">
                         <Grid item>
                             <Link href="#" variant="body2">
-                                Already have an account? Sign in
+                                Já possui conta? Acesse aqui
                             </Link>
                         </Grid>
                     </Grid>

@@ -9,16 +9,16 @@ import TableRow from '@material-ui/core/TableRow';
 import Titulo from '../Titulo';
 
 // Generate Order Data
-function createData(id, date, name, shipTo, paymentMethod, amount) {
-    return { id, date, name, shipTo, paymentMethod, amount };
+function createData(id, date, name, Local, Data, amount) {
+    return { id, date, name, Local, Data, amount };
 }
 
 const rows = [
-    createData(0, '16 Mar, 2019', 'Elvis Presley', 'Tupelo, MS', 'VISA ⠀•••• 3719', 312.44),
-    createData(1, '16 Mar, 2019', 'Paul McCartney', 'London, UK', 'VISA ⠀•••• 2574', 866.99),
-    createData(2, '16 Mar, 2019', 'Tom Scholz', 'Boston, MA', 'MC ⠀•••• 1253', 100.81),
-    createData(3, '16 Mar, 2019', 'Michael Jackson', 'Gary, IN', 'AMEX ⠀•••• 2000', 654.39),
-    createData(4, '15 Mar, 2019', 'Bruce Springsteen', 'Long Branch, NJ', 'VISA ⠀•••• 5919', 212.79),
+    createData(0, '16548945168', 'Elvis Presley', 'Tupelo, MS', '23/08/2021', "10:00"),
+    createData(1, '15648923457', 'Paul McCartney', 'London, UK', '23/08/2021', "11:00"),
+    createData(2, '56223541563', 'Tom Scholz', 'Boston, MA', '23/08/2021', "12:00"),
+    createData(3, '15642316548', 'Michael Jackson', 'Gary, IN', '23/08/2021', "13:00"),
+    createData(4, '16423589477', 'Bruce Springsteen', 'Long Branch, NJ', '23/08/2021', "14:00"),
 ];
 
 function preventDefault(event) {
@@ -51,8 +51,8 @@ export default function Agendamentos() {
                         <TableRow key={row.id}>
                             <TableCell>{row.date}</TableCell>
                             <TableCell>{row.name}</TableCell>
-                            <TableCell>{row.shipTo}</TableCell>
-                            <TableCell>{row.paymentMethod}</TableCell>
+                            <TableCell>{row.Local}</TableCell>
+                            <TableCell>{row.Data}</TableCell>
                             <TableCell align="right">{row.amount}</TableCell>
                         </TableRow>
                     ))}

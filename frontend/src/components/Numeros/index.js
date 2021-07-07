@@ -18,12 +18,12 @@ export default function Numeros() {
     const classes = useStyles();
     return (
         <React.Fragment>
-            <Titulo>Recent Deposits</Titulo>
+            <Titulo>Agendamentos recentes</Titulo>
             <Typography component="p" variant="h4">
-                $3,024.00
+                3,024
             </Typography>
             <Typography color="textSecondary" className={classes.depositContext}>
-                on 15 March, 2019
+                on 15 March, 2021
             </Typography>
             <div>
                 <Link color="primary" href="#" onClick={preventDefault}>
